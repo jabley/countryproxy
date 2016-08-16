@@ -1,0 +1,7 @@
+# -*- mode: conf-unix -*-
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# endor/github.com/elazarl/goproxy/ext/html/cp1255.html
+# contains Latin-1 with CRLF?
+vendor/github.com/elazarl/goproxy/ext/html/cp1255.html binary
