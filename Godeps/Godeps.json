@@ -1,0 +1,12 @@
+{
+	"ImportPath": "github.com/jabley/countryproxy",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Deps": [
+		{
+			"ImportPath": "github.com/elazarl/goproxy",
+			"Comment": "v1.0-91-g408409f",
+			"Rev": "408409fa5048f40cd361caa74864f845414b052e"
+		}
+	]
+}
