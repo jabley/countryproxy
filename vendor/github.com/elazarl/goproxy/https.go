@@ -371,7 +371,7 @@ func (proxy *ProxyHttpServer) NewConnectDialToProxy(https_proxy string) func(net
 
 func TLSConfigFromCA(ca *tls.Certificate) func(host string, ctx *ProxyCtx) (*tls.Config, error) {
 	return func(host string, ctx *ProxyCtx) (*tls.Config, error) {
-		config := *defaultTLSConfig
+		config := defaultTLSConfig
 		ctx.Logf("signing for %s", stripPort(host))
 		cert, err := signHost(*ca, []string{stripPort(host)})
 		if err != nil {
@@ -379,6 +379,6 @@ func TLSConfigFromCA(ca *tls.Certificate) func(host string, ctx *ProxyCtx) (*tls
 			return nil, err
 		}
 		config.Certificates = append(config.Certificates, cert)
-		return &config, nil
+		return config, nil
 	}
 }
